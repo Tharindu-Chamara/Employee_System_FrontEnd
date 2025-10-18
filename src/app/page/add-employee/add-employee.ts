@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-employee',
@@ -19,5 +20,10 @@ export class AddEmployee {
 
   Addemployee() {
     console.log('Employee Added Successfully', this.Employee);
+    Swal.fire({
+      title: 'Employee Added!',
+      icon: 'success',
+      draggable: true,
+    });
   }
 }
