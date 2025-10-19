@@ -24,6 +24,9 @@ export interface Employee {
   imports: [FormsModule, CommonModule],
 })
 export class ViewAllEmployees implements OnInit, OnDestroy {
+  updateEmployee(employee: Employee) {
+    this.router.navigate(['/update-employee'], { state: { employee } });
+  }
   employees: Employee[] = [];
   loading = false;
   errorMessage: string | null = null;

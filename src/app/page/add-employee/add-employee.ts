@@ -32,8 +32,6 @@ export class AddEmployee {
         });
         console.log('Employee Data:', this.Employee);
         console.log('Employee Added Successfully', response);
-        // Navigate to the view list so it reloads from the server
-        this.router.navigate(['/view-employees']);
       },
       error: (err) => {
         console.error('Error adding employee:', err);

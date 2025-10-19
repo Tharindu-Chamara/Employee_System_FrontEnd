@@ -1,0 +1,55 @@
+<!-- Centered Button -->
+<div class="center-container">
+  <button type="button" class="btn btn-magic" data-bs-toggle="modal" data-bs-target="#updateEmployeeModal">
+    Edit Employee
+  </button>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="updateEmployeeModal" tabindex="-1" aria-labelledby="updateEmployeeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content w-75 mx-auto">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateEmployeeLabel">Update Employee</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form (ngSubmit)="updateEmployee()">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input id="firstName" name="firstName" class="form-control" [(ngModel)]="employee.firstName" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input id="lastName" name="lastName" class="form-control" [(ngModel)]="employee.lastName" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="email" class="form-control" [(ngModel)]="employee.email" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="departmentId" class="form-label">Department</label>
+            <input id="departmentId" name="departmentId" class="form-control" [(ngModel)]="employee.departmentId" />
+          </div>
+
+          <div class="mb-3">
+            <label for="roleId" class="form-label">Role</label>
+            <input id="roleId" name="roleId" class="form-control" [(ngModel)]="employee.roleId" />
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">
+              Save changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
