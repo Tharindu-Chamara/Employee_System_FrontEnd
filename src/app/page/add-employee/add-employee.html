@@ -26,9 +26,9 @@
       <label for="exampleInputDepartment" class="form-label">Department Id</label>
       <select class="form-select" id="exampleInputDepartment" name="departmentId" [(ngModel)]="Employee.departmentId">
         <option value="">Select Department Id</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="D001">D001</option>
+        <option value="D002">D002</option>
+        <option value="D003">D003</option>
       </select>
     </div>
 
@@ -36,12 +36,12 @@
       <label for="exampleInputRole" class="form-label">Role Id</label>
       <select class="form-select" id="exampleInputRole" name="roleId" [(ngModel)]="Employee.roleId">
         <option value="">Select Role Id</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="R001">R001</option>
+        <option value="R002">R002</option>
+        <option value="R003">R003</option>
       </select>
     </div>
 
-    <button type="submit" class="btn btn-success" (click)="Addemployee()">Add Employee</button>
+    <button type="submit" class="btn btn-success" (click)="addemployee()">Add Employee</button>
   </form>
 </div>

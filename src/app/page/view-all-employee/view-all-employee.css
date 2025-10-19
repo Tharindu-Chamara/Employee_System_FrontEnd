@@ -1,0 +1,89 @@
+/* view-all-employee.css */
+
+.container {
+  margin-top: 20px;
+}
+
+.table {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Table Header */
+.table thead th {
+  background-color: #4995e0;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Table Body */
+.table tbody td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Striped Rows */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #ffffff;
+}
+
+/* Hover Effect */
+.table-hover tbody tr:hover {
+  background-color: #e3f2fd !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Table Borders */
+.table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table {
+    font-size: 12px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 10px 5px;
+  }
+}
+
+/* Optional: Add spacing between cells */
+.table td,
+.table th {
+  padding: 12px 15px;
+}
+
+/* Optional: Make first column (ID) bold */
+.table tbody td:first-child {
+  font-weight: 600;
+  color: #4995e0;
+}
+
+/* Optional: Style email column */
+.table tbody td:nth-child(4) {
+  color: #007bff;
+  font-style: italic;
+}
